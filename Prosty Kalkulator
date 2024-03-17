@@ -1,0 +1,42 @@
+using System;
+
+namespace kalkulator
+{
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      Console.WriteLine("Wprowadź liczbę: ");
+      int l1 = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Wprowadź liczbę do porównania: ");
+      int l2 = Convert.ToInt32(Console.ReadLine());
+      Console.WriteLine("Jakie zastosować działanie? \n");
+      Console.WriteLine(" + = 1,- = 2, * = 3, / = 4");
+      int wybor = Convert.ToInt32(Console.ReadLine());
+      switch (wybor)
+      {
+          
+          case 1:
+            int dodawanie = l1 + l2;
+            Console.WriteLine("Wynik dodawania liczb "+l1+" oraz "+l2+" wynosi: "+dodawanie);
+          break;
+          
+          case 2:
+          int odejmowanie = l1 - l2;
+            Console.WriteLine("Wynik odejmowania liczb "+l1+" oraz "+l2+" wynosi: "+odejmowanie);
+            break;
+            
+          case 3:
+           int mnozenie = l1 * l2;
+            Console.WriteLine("Iloczyn liczb "+l1+" oraz " +l2+ " wynosi: "+mnozenie);
+            break;
+            
+           case 4:   
+           int dzielenie = l1 / l2;
+            Console.WriteLine("Iloraz liczb "+l1+" oraz "+l2+ " wynosi: "+dzielenie);
+            break;
+      }
+      
+    } 
+  }
+}
