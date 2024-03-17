@@ -1,0 +1,76 @@
+
+using System;
+
+
+class HelloWorld {
+    
+    
+  static void Main() {
+      
+      
+    string[] lista = new string[0];
+    int wybor= 0;
+    
+    Console.WriteLine("        Witaj W sklepie!      ");
+    Console.WriteLine("    Wybierz co chcesz zrobić:  ");
+    Console.WriteLine("1. Dodaj przedmiot do koszyka");
+    Console.WriteLine("2.  Usuń przedmiot z koszyka ");
+    Console.WriteLine("3.        Pokaż koszyk       ");
+    Console.WriteLine("3.           Wyjdź           ");
+    wybor = Convert.ToInt32(Console.ReadLine());
+    switch (wybor){
+        
+        case 1:
+            Console.WriteLine("1. Dodaj przedmiot do Koszyka");
+            Console.WriteLine("2. Wyjdź z koszyka           ");
+            
+            int dod = 0;
+            int exit = 0;
+            
+            while (exit < 1){
+                for (int i = 0; i<lista.Length; i++){
+                    lista[i] = Console.In.ReadLine();
+                    Console.WriteLine("Chcesz wyjść?");
+                    Console.WriteLine("1/0");
+                    dod = Convert.ToInt32(Console.ReadLine());
+                    
+                    switch(dod){
+                        
+                        case 1:
+                        Console.WriteLine("Dodaj Ponownie");
+                        break;
+                        
+                        case 2:
+                        exit = 1;
+                        break;
+                        
+                    }
+                    
+                }
+            }
+        break;
+        
+        case 2:
+        break;
+        
+        case 3:
+            for(int j = 0; j<lista.Length; j++){
+                Console.WriteLine(lista[j]);
+            }
+        break;
+        
+        case 4:
+        
+        break;
+        
+        default:
+        break;
+        
+    }
+    
+    
+    
+  }
+  
+  
+}
